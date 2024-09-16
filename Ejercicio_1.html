@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1_Fabiola</title>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 95%; /* Ajuste del ancho del contenedor */
+            max-width: 1200px; /* Para no exceder un tamaño máximo */
+            margin: 5px auto;
+            border: 1px solid black; /* Añadir borde negro */
+            padding: 10px; /* Añadir espacio interno para separar el contenido del borde */
+        }
+
+        .image-section {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .image-section img {
+            width: 97.5%; /* Ajusta la imagen al 100% del ancho del contenedor */
+            height: auto;
+            border: 1px solid #000;
+        }
+
+        .text-table-section {
+            margin-bottom: 20px;
+        }
+
+        .blue-text {
+            color: blue;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        table td {
+            border: 1px solid #000;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .columns {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px; /* Espacio entre las dos columnas */
+        }
+
+        .column {
+            width: 48%;
+            border: 1px solid #000;
+            padding: 20px;
+        }
+
+        .left {
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .right {
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Landscape -->
+        <div class="image-section">
+            <img src="Landscape.jpg" alt="Landscape" />
+        </div>
+
+        <!-- Texto azul -->
+        <div class="container">
+        <div class="text-table-section">
+
+            <br>
+
+            <div class="blue-text">Texto azul</div>
+
+            <br>
+
+            <table>
+                <tr>
+                    <td rowspan="3"></td>
+                    <td></td>
+                    <td colspan="2"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Izquierda y derecha -->
+        <div class="columns">
+            <div class="column left">
+                <p>Texto izquierda</p>
+            </div>
+            <div class="column right">
+                <p>Texto derecha</p>
+            </div>
+        </div>
+
+        <br>
+
+    </div>
+</div>
+</body>
+</html>
