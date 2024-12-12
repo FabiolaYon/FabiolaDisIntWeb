@@ -1,0 +1,340 @@
+:root {
+    --primary-color: #8a809e; /* Color principal para destacar elementos */
+    --secondary-color: #e3d7db; /* Color de fondo general */
+    --text-color: #ffffff; /* Color del texto */
+    --font-family: Arial, sans-serif; /* Fuente principal */
+}
+
+/* Estilos generales */
+* {
+    box-sizing: border-box; /* Asegura que el padding y borde no afecten el tamaño del elemento */
+}
+
+body {
+    display: flex; /* Diseño flexible para el cuerpo */
+    flex-direction: column; /* Ordena los elementos en columna */
+    min-height: 100vh; /* Altura mínima de toda la ventana */
+    margin: 0; /* Elimina los márgenes predeterminados */
+    font-family: var(--font-family); /* Fuente definida en variables */
+    background-color: var(--secondary-color); /* Fondo definido en variables */
+}
+
+/* Encabezado */
+.header {
+    background-color: var(--primary-color); /* Fondo del encabezado */
+    color: var(--text-color); /* Color del texto */
+    display: flex; /* Diseño flexible para ordenar elementos */
+    align-items: center; /* Centra verticalmente los elementos */
+    justify-content: space-between; /* Distribuye espacio entre elementos */
+    padding: 1rem 2rem; /* Espaciado interno */
+    width: 100%; /* Ocupa todo el ancho */
+}
+
+.logo {
+    font-size: 1.7rem; /* Tamaño de fuente grande */
+    font-weight: bold; /* Negrita */
+    color: #dcdae0; /* Color del logo */
+}
+
+.menu {
+    list-style: none; /* Elimina puntos de la lista */
+    display: flex; /* Elementos en fila */
+    gap: 1.5rem; /* Espaciado entre elementos */
+}
+
+.menu a {
+    color: var(--text-color); /* Color del texto */
+    text-decoration: none; /* Sin subrayado */
+    font-size: 0.9rem; /* Tamaño de fuente menor */
+}
+
+/* Sección de Promoción */
+.promocion {
+    position: relative; /* Posicionamiento relativo para elementos dentro */
+    max-height: 50vh; /* Altura máxima de la sección */
+    overflow: hidden; /* Esconde contenido que sobrepase los límites */
+}
+
+.promo-img {
+    width: 100vw; /* Ocupa todo el ancho visible */
+    height: 100%; /* Altura completa */
+    max-height: 50vh; /* Altura máxima para imágenes */
+    object-fit: cover; /* Ajusta imagen sin deformar */
+    object-position: center; /* Centra el contenido de la imagen */
+}
+
+/* Dots de navegación */
+.promo-dots {
+    position: absolute; /* Superposición sobre la imagen */
+    bottom: 10px; /* Espaciado desde abajo */
+    width: 100%; /* Ocupa todo el ancho */
+    text-align: center; /* Centra los dots */
+}
+
+.promo-dots .dot {
+    height: 14px; /* Altura de los dots */
+    width: 14px; /* Ancho de los dots */
+    margin: 0 5px; /* Espaciado lateral */
+    background-color: #ddd; /* Color base */
+    border-radius: 50%; /* Forma circular */
+    display: inline-block; /* Bloque en línea */
+    cursor: pointer; /* Cambia cursor a mano */
+    transition: 0.3s; /* Animación al interactuar */
+}
+
+.promo-dots .dot:hover,
+.promo-dots .dot.active {
+    background-color: var(--primary-color); /* Color en estado activo o hover */
+}
+
+/* Flechas de navegación */
+.arrow {
+    font-size: 5rem; /* Tamaño grande para las flechas */
+    color: white; /* Color blanco */
+    position: absolute; /* Posición relativa a la sección */
+    top: 50%; /* Centrado vertical */
+    transform: translateY(-50%); /* Ajusta posición hacia el centro */
+    cursor: pointer; /* Cursor de mano */
+}
+
+.left {
+    left: 10px; /* Alineación izquierda */
+}
+
+.right {
+    right: 30px; /* Alineación derecha */
+}
+
+/* Sección de Productos y Recomendados */
+.productos,
+.recomendados {
+    background-color: var(--secondary-color); /* Fondo claro */
+    padding: 2rem; /* Espaciado interno */
+    margin: 0 auto; /* Centrado */
+    display: grid; /* Diseño en cuadrícula */
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas iguales */
+    grid-template-rows: auto auto; /* Filas automáticas */
+    gap: 1rem; /* Espaciado entre elementos */
+    grid-auto-flow: row; /* Flujo en filas */
+}
+
+/* Títulos generales */
+.productos h2,
+.recomendados h2 {
+    text-align: center; /* Centra el texto */
+    margin-bottom: 1rem; /* Espaciado inferior */
+    font-size: 1.5rem; /* Tamaño de fuente */
+    color: var(--primary-color); /* Color principal */
+}
+
+/* Colocación específica del título 'Nuestros productos' */
+#nuestrosProductos {
+    grid-column: 1 / 3; /* Ocupa las dos primeras columnas */
+    grid-row: 1; /* Primera fila */
+    font-size: 1.8rem; /* Fuente más grande */
+    font-weight: bold; /* Texto en negrita */
+    color: #ffffff !important; /* Color blanco */
+    align-self: end; /* Alineado al final de la celda */
+    margin-bottom: 0.5rem; /* Espaciado inferior reducido */
+}
+
+/* Colocación específica del título 'Recomendados' */
+.Recomendados {
+    grid-column: 3; /* Colocado en la tercera columna */
+    grid-row: 1; /* Primera fila */
+    text-align: center; /* Centra el texto */
+    font-size: 1.5rem; /* Tamaño de fuente */
+    font-weight: 100; /* Fuente delgada */
+    color: #ffffff !important; /* Color blanco forzado */
+    align-self: end; /* Alineado al final de la celda */
+    margin-bottom: 0.5rem; /* Espaciado inferior reducido */
+}
+
+/* Estilo individual para cada producto */
+.producto {
+    background-color: #ffffff; /* Fondo blanco */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    padding: 1rem; /* Espaciado interno */
+    text-align: center; /* Centra el contenido */
+}
+
+/* Estilo para las imágenes de los productos */
+.producto img {
+    width: 90%; /* Ocupa el 90% del contenedor */
+    margin: auto; /* Centrado horizontal */
+    object-fit: contain; /* Ajusta imagen sin recortar */
+    border-radius: 5px; /* Bordes redondeados */
+    max-height: 20vw; /* Altura máxima relativa al ancho de la ventana */
+}
+
+/* Ajustes para productos específicos */
+.producto-eraser {
+    grid-row: 2 / 3; /* Fila 2 */
+    grid-column: 1 / 2; /* Columna 1 */
+}
+
+.producto-notebook {
+    grid-row: 2 / 3; /* Fila 2 */
+    grid-column: 2 / 3; /* Columna 2 */
+}
+
+.producto-crayons {
+    grid-row: 3 / 4; /* Fila 3 */
+    grid-column: 1 / 3; /* Ocupa ambas columnas */
+}
+
+.producto-pen {
+    grid-row: 2 / 4; /* Desde la fila 2 hasta la fila 3 */
+    grid-column: 3 / 4; /* Columna 3 */
+    display: flex; /* Diseño flexible */
+    flex-direction: column; /* Apila contenido verticalmente */
+    justify-content: flex-start; /* Alinea contenido al inicio */
+    align-items: center; /* Centra horizontalmente */
+    padding: 1rem; /* Espaciado interno */
+    height: auto; /* Altura automática */
+    min-height: 300px; /* Altura mínima */
+}
+
+/* Imagen dentro de 'producto-pen' */
+.producto-pen img {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    max-height: 35vw; /* Altura máxima relativa */
+    height: auto; /* Mantiene proporción */
+    object-fit: contain; /* Ajusta imagen sin deformar */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Texto dentro de 'producto-pen' */
+.producto-pen .texto {
+    font-size: 1rem; /* Tamaño de fuente */
+    color: #333; /* Texto gris oscuro */
+    margin-top: auto; /* Texto en la parte inferior */
+    text-align: center; /* Centrado horizontal */
+    padding: 1rem; /* Espaciado interno */
+}
+
+/* Redes sociales */
+.social {
+    text-align: center; /* Centra el contenido */
+    padding: 1rem; /* Espaciado interno */
+    background-color: white; /* Fondo blanco */
+    width: 100%; /* Ocupa todo el ancho */
+}
+
+.social a img {
+    width: 32px; /* Tamaño de los iconos */
+    margin: 0 10px; /* Espaciado entre iconos */
+}
+
+/* Ubicación */
+.ubicacion {
+    padding: 20px; /* Espaciado interno */
+    margin: 0; /* Sin márgenes */
+    display: flex; /* Diseño flexible */
+    justify-content: space-between; /* Espaciado uniforme entre elementos */
+    align-items: center; /* Centrado vertical */
+    gap: 1rem; /* Espaciado entre contenedores */
+    flex-wrap: wrap; /* Ajuste en filas si no caben en una línea */
+}
+
+/* Mapa */
+.map {
+    display: flex; /* Diseño flexible */
+    flex-direction: column; /* Apila contenido */
+    align-items: center; /* Centra horizontalmente */
+    justify-content: center; /* Centra verticalmente */
+    text-align: center; /* Texto centrado */
+    gap: 0.5rem; /* Espaciado entre el mapa y el texto */
+    flex: 1; /* Ocupa espacio proporcional */
+}
+
+.map iframe {
+    width: 200px; /* Ancho del mapa */
+    height: 200px; /* Altura del mapa */
+    border-radius: 10px; /* Bordes redondeados */
+    margin-top: 0; /* Sin margen superior */
+}
+
+.map p {
+    font-size: 0.8rem; /* Tamaño de fuente */
+    color: var(--text-color); /* Color del texto */
+    margin: 0; /* Sin márgenes */
+}
+
+/* Información circular */
+.info {
+    position: relative; /* Posicionamiento relativo */
+    width: 300px; /* Tamaño del contenedor */
+    height: 300px; /* Tamaño del contenedor */
+    text-align: center; /* Centra el contenido */
+    display: flex; /* Diseño flexible */
+    flex-direction: column; /* Apila contenido */
+    justify-content: center; /* Centrado vertical */
+    align-items: center; /* Centrado horizontal */
+    overflow: hidden; /* Oculta contenido desbordado */
+    clip-path: inset(0 0 0 25%); /* Recorte para diseño */
+}
+
+.info img {
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Altura completa */
+    border-radius: 50%; /* Forma circular */
+    object-fit: cover; /* Ajuste de imagen */
+}
+
+.info.move-left {
+    transform: translateX(-95px); /* Desplazamiento hacia la izquierda */
+}
+
+.texto-info {
+    position: absolute; /* Superposición sobre la imagen */
+    color: white; /* Texto blanco */
+    font-size: 1rem; /* Tamaño del texto */
+    text-align: left; /* Alineación a la izquierda */
+    line-height: 0; /* Sin espaciado entre líneas */
+    display: flex; /* Diseño flexible */
+    flex-direction: column; /* Apila elementos */
+    padding-left: 10px; /* Espaciado lateral */
+    gap: 1rem; /* Espaciado entre textos */
+}
+
+/* Párrafos específicos de texto-info */
+.texto-info:nth-of-type(1) {
+    top: 20%; /* Posición superior */
+}
+
+.texto-info:nth-of-type(2) {
+    top: 50%; /* Posición central */
+    transform: translateY(-90%); /* Ajuste vertical */
+}
+
+.texto-info:nth-of-type(3) {
+    bottom: 20%; /* Posición inferior */
+}
+
+/* Imagen de la persona con marcador de ubicación */
+.person {
+    width: 300px; /* Ancho del contenedor */
+    height: 300px; /* Altura del contenedor */
+    display: flex; /* Diseño flexible */
+    justify-content: center; /* Centrado horizontal */
+    align-items: flex-start; /* Alineado superior */
+    position: relative; /* Posicionamiento relativo */
+    flex: 1; /* Espaciado proporcional */
+}
+
+.person img {
+    width: 100%; /* Ancho completo */
+    position: absolute; /* Posicionamiento libre */
+    top: -20%; /* Ajuste hacia arriba */
+}
+
+/* Footer */
+footer {
+    background-color: #49516d; /* Fondo oscuro */
+    color: var(--text-color); /* Texto blanco */
+    text-align: center; /* Centra el contenido */
+    padding: 10px 0; /* Espaciado vertical */
+    margin: 0; /* Sin márgenes */
+}
