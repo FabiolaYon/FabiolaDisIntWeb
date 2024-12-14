@@ -344,4 +344,105 @@ footer {
   text-align: center; /* Centra el contenido */
   padding: 10px 0; /* Espaciado vertical */
   margin: 0; /* Sin márgenes */
+}
+
+/* Encabezado */
+.header {
+  background-color: var(--primary-color); /* Fondo del encabezado */
+  color: var(--text-color); /* Color del texto */
+  display: flex; /* Diseño flexible para ordenar elementos */
+  align-items: center; /* Centra verticalmente los elementos */
+  justify-content: space-between; /* Distribuye espacio entre elementos */
+  width: 100%; /* Ocupa todo el ancho */
+}
+
+.logo {
+  font-size: 1.7rem; /* Tamaño de fuente grande */
+  font-weight: bold; /* Negrita */
+  color: #dcdae0; /* Color del logo */
+}
+
+.menu {
+  list-style: none; /* Elimina puntos de la lista */
+  display: flex; /* Elementos en fila */
+  gap: 1.5rem; /* Espaciado entre elementos */
+}
+
+/* Moviles */
+/* He tomado como ejemplo un Samsung Galaxy S8+ */
+@media all and (max-width: 768px) {
+  /* Ajuste general */
+  body {
+    font-size: 14px;
+  }
+  /* Encabezado */
+  .header {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+  }
+  .menu {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0;
+  }
+  /* Sección Promoción */
+  .promocion {
+    max-height: 30vh;
+  }
+  .promo-img {
+    max-height: 30vh;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .arrow {
+    font-size: 3rem;
+  }
+  /* Sección Productos */
+  .productos {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 0.5rem;
+  }
+  .producto {
+    padding: 0.5rem;
+  }
+  .producto img {
+    max-height: 30vw;
+  }
+  /* Sección Ubicación */
+  .ubicacion {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  .map iframe {
+    width: 100%;
+    height: 150px;
+  }
+  .info, .person {
+    width: 200px;
+    height: 200px;
+  }
+  .texto-info {
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+  }
+  /* Footer de redes sociales */
+  .social img {
+    width: 24px;
+    margin: 0 5px;
+  }
+}
+/* Tablets */
+@media all and (min-width: 769px) and (max-width: 1024px) {
+  :root {
+    --primary-color: blue;
+  }
+}
+/* Monitores (Pantallas grandes) */
+@media all and (min-width: 1025px) {
+  :root {
+    --primary-color: green;
+  }
 }/*# sourceMappingURL=styles.css.map */
