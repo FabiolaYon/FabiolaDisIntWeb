@@ -8,368 +8,318 @@
 
 /* Estilos generales */
 * {
-  box-sizing: border-box; /* Asegura que el padding y borde no afecten el tamaño del elemento */
+  box-sizing: border-box;
 }
 
 body {
-  display: flex; /* Diseño flexible para el cuerpo */
-  flex-direction: column; /* Ordena los elementos en columna */
-  min-height: 100vh; /* Altura mínima de toda la ventana */
-  margin: 0; /* Elimina los márgenes predeterminados */
-  font-family: var(--font-family); /* Fuente definida en variables */
-  background-color: var(--secondary-color); /* Fondo definido en variables */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  font-family: var(--font-family);
+  background-color: var(--secondary-color);
 }
 
 /* Encabezado */
 .header {
-  background-color: var(--primary-color); /* Fondo del encabezado */
-  color: var(--text-color); /* Color del texto */
-  display: flex; /* Diseño flexible para ordenar elementos */
-  align-items: center; /* Centra verticalmente los elementos */
-  justify-content: space-between; /* Distribuye espacio entre elementos */
-  padding: 1rem 2rem; /* Espaciado interno */
-  width: 100%; /* Ocupa todo el ancho */
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  width: 100%;
 }
 
 .logo {
-  font-size: 1.7rem; /* Tamaño de fuente grande */
-  font-weight: bold; /* Negrita */
-  color: #dcdae0; /* Color del logo */
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: #dcdae0;
 }
 
 .menu {
-  list-style: none; /* Elimina puntos de la lista */
-  display: flex; /* Elementos en fila */
-  gap: 1.5rem; /* Espaciado entre elementos */
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
 }
 
 .menu a {
-  color: var(--text-color); /* Color del texto */
-  text-decoration: none; /* Sin subrayado */
-  font-size: 0.9rem; /* Tamaño de fuente menor */
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 0.9rem;
 }
 
 /* Sección de Promoción */
 .promocion {
-  position: relative; /* Posicionamiento relativo para elementos dentro */
-  max-height: 50vh; /* Altura máxima de la sección */
-  overflow: hidden; /* Esconde contenido que sobrepase los límites */
+  position: relative;
+  max-height: 50vh;
+  overflow: hidden;
 }
 
 .promo-img {
-  width: 100vw; /* Ocupa todo el ancho visible */
-  height: 100%; /* Altura completa */
-  max-height: 50vh; /* Altura máxima para imágenes */
+  width: 100vw;
+  height: 100%;
+  max-height: 50vh;
   -o-object-fit: cover;
-     object-fit: cover; /* Ajusta imagen sin deformar */
+     object-fit: cover;
   -o-object-position: center;
-     object-position: center; /* Centra el contenido de la imagen */
+     object-position: center;
 }
 
 /* Dots de navegación */
 .promo-dots {
-  position: absolute; /* Superposición sobre la imagen */
-  bottom: 10px; /* Espaciado desde abajo */
-  width: 100%; /* Ocupa todo el ancho */
-  text-align: center; /* Centra los dots */
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
 }
 
 .promo-dots .dot {
-  height: 14px; /* Altura de los dots */
-  width: 14px; /* Ancho de los dots */
-  margin: 0 5px; /* Espaciado lateral */
-  background-color: #ddd; /* Color base */
-  border-radius: 50%; /* Forma circular */
-  display: inline-block; /* Bloque en línea */
-  cursor: pointer; /* Cambia cursor a mano */
-  transition: 0.3s; /* Animación al interactuar */
+  height: 14px;
+  width: 14px;
+  margin: 0 5px;
+  background-color: #ddd;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .promo-dots .dot:hover,
 .promo-dots .dot.active {
-  background-color: var(--primary-color); /* Color en estado activo o hover */
+  background-color: var(--primary-color);
 }
 
 /* Flechas de navegación */
 .arrow {
-  font-size: 5rem; /* Tamaño grande para las flechas */
-  color: white; /* Color blanco */
-  position: absolute; /* Posición relativa a la sección */
-  top: 50%; /* Centrado vertical */
-  transform: translateY(-50%); /* Ajusta posición hacia el centro */
-  cursor: pointer; /* Cursor de mano */
+  font-size: 5rem;
+  color: white;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
 }
 
 .left {
-  left: 10px; /* Alineación izquierda */
+  left: 10px;
 }
 
 .right {
-  right: 30px; /* Alineación derecha */
+  right: 30px;
 }
 
 /* Sección de Productos y Recomendados */
 .productos,
 .recomendados {
-  background-color: var(--secondary-color); /* Fondo claro */
-  padding: 2rem; /* Espaciado interno */
-  margin: 0 auto; /* Centrado */
-  display: grid; /* Diseño en cuadrícula */
-  grid-template-columns: repeat(3, 1fr); /* Tres columnas iguales */
-  grid-template-rows: auto auto; /* Filas automáticas */
-  gap: 1rem; /* Espaciado entre elementos */
-  grid-auto-flow: row; /* Flujo en filas */
+  background-color: var(--secondary-color);
+  padding: 2rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto;
+  gap: 1rem;
+  grid-auto-flow: row;
 }
 
-/* Títulos generales */
 .productos h2,
 .recomendados h2 {
-  text-align: center; /* Centra el texto */
-  margin-bottom: 1rem; /* Espaciado inferior */
-  font-size: 1.5rem; /* Tamaño de fuente */
-  color: var(--primary-color); /* Color principal */
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: var(--primary-color);
 }
 
-/* Colocación específica del título 'Nuestros productos' */
 #nuestrosProductos {
-  grid-column: 1/3; /* Ocupa las dos primeras columnas */
-  grid-row: 1; /* Primera fila */
-  font-size: 1.8rem; /* Fuente más grande */
-  font-weight: bold; /* Texto en negrita */
-  color: #ffffff !important; /* Color blanco */
-  align-self: end; /* Alineado al final de la celda */
-  margin-bottom: 0.5rem; /* Espaciado inferior reducido */
+  grid-column: 1/3;
+  grid-row: 1;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ffffff !important;
+  align-self: end;
+  margin-bottom: 0.5rem;
 }
 
-/* Colocación específica del título 'Recomendados' */
 .Recomendados {
-  grid-column: 3; /* Colocado en la tercera columna */
-  grid-row: 1; /* Primera fila */
-  text-align: center; /* Centra el texto */
-  font-size: 1.5rem; /* Tamaño de fuente */
-  font-weight: 100; /* Fuente delgada */
-  color: #ffffff !important; /* Color blanco forzado */
-  align-self: end; /* Alineado al final de la celda */
-  margin-bottom: 0.5rem; /* Espaciado inferior reducido */
+  grid-column: 3;
+  grid-row: 1;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 100;
+  color: #ffffff !important;
+  align-self: end;
+  margin-bottom: 0.5rem;
 }
 
-/* Estilo individual para cada producto */
 .producto {
-  background-color: #ffffff; /* Fondo blanco */
-  border-radius: 10px; /* Bordes redondeados */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
-  padding: 1rem; /* Espaciado interno */
-  text-align: center; /* Centra el contenido */
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  text-align: center;
 }
 
-/* Estilo para las imágenes de los productos */
 .producto img {
-  width: 90%; /* Ocupa el 90% del contenedor */
-  margin: auto; /* Centrado horizontal */
+  width: 90%;
+  margin: auto;
   -o-object-fit: contain;
-     object-fit: contain; /* Ajusta imagen sin recortar */
-  border-radius: 5px; /* Bordes redondeados */
-  max-height: 20vw; /* Altura máxima relativa al ancho de la ventana */
+     object-fit: contain;
+  border-radius: 5px;
+  max-height: 20vw;
 }
 
-/* Ajustes para productos específicos */
 .producto-eraser {
-  grid-row: 2/3; /* Fila 2 */
-  grid-column: 1/2; /* Columna 1 */
+  grid-row: 2/3;
+  grid-column: 1/2;
 }
 
 .producto-notebook {
-  grid-row: 2/3; /* Fila 2 */
-  grid-column: 2/3; /* Columna 2 */
+  grid-row: 2/3;
+  grid-column: 2/3;
 }
 
 .producto-crayons {
-  grid-row: 3/4; /* Fila 3 */
-  grid-column: 1/3; /* Ocupa ambas columnas */
+  grid-row: 3/4;
+  grid-column: 1/3;
 }
 
 .producto-pen {
-  grid-row: 2/4; /* Desde la fila 2 hasta la fila 3 */
-  grid-column: 3/4; /* Columna 3 */
-  display: flex; /* Diseño flexible */
-  flex-direction: column; /* Apila contenido verticalmente */
-  justify-content: flex-start; /* Alinea contenido al inicio */
-  align-items: center; /* Centra horizontalmente */
-  padding: 1rem; /* Espaciado interno */
-  height: auto; /* Altura automática */
-  min-height: 300px; /* Altura mínima */
+  grid-row: 2/4;
+  grid-column: 3/4;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1rem;
+  min-height: 300px;
 }
 
-/* Imagen dentro de 'producto-pen' */
 .producto-pen img {
-  width: 100%; /* Ocupa todo el ancho disponible */
-  max-height: 35vw; /* Altura máxima relativa */
-  height: auto; /* Mantiene proporción */
+  width: 100%;
+  max-height: 35vw;
+  height: auto;
   -o-object-fit: contain;
-     object-fit: contain; /* Ajusta imagen sin deformar */
-  border-radius: 5px; /* Bordes redondeados */
+     object-fit: contain;
+  border-radius: 5px;
 }
 
-/* Texto dentro de 'producto-pen' */
 .producto-pen .texto {
-  font-size: 1rem; /* Tamaño de fuente */
-  color: #333; /* Texto gris oscuro */
-  margin-top: auto; /* Texto en la parte inferior */
-  text-align: center; /* Centrado horizontal */
-  padding: 1rem; /* Espaciado interno */
+  font-size: 1rem;
+  color: #333;
+  margin-top: auto;
+  text-align: center;
+  padding: 1rem;
 }
 
-/* Redes sociales */
+/* Redes Sociales */
 .social {
-  text-align: center; /* Centra el contenido */
-  padding: 1rem; /* Espaciado interno */
-  background-color: white; /* Fondo blanco */
-  width: 100%; /* Ocupa todo el ancho */
+  text-align: center;
+  padding: 1rem;
+  background-color: white;
+  width: 100%;
 }
 
 .social a img {
-  width: 32px; /* Tamaño de los iconos */
-  margin: 0 10px; /* Espaciado entre iconos */
+  width: 32px;
+  margin: 0 10px;
 }
 
 /* Ubicación */
 .ubicacion {
-  padding: 20px; /* Espaciado interno */
-  margin: 0; /* Sin márgenes */
-  display: flex; /* Diseño flexible */
-  justify-content: space-between; /* Espaciado uniforme entre elementos */
-  align-items: center; /* Centrado vertical */
-  gap: 1rem; /* Espaciado entre contenedores */
-  flex-wrap: wrap; /* Ajuste en filas si no caben en una línea */
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
-/* Mapa */
 .map {
-  display: flex; /* Diseño flexible */
-  flex-direction: column; /* Apila contenido */
-  align-items: center; /* Centra horizontalmente */
-  justify-content: center; /* Centra verticalmente */
-  text-align: center; /* Texto centrado */
-  gap: 0.5rem; /* Espaciado entre el mapa y el texto */
-  flex: 1; /* Ocupa espacio proporcional */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0.5rem;
+  flex: 1;
 }
 
 .map iframe {
-  width: 200px; /* Ancho del mapa */
-  height: 200px; /* Altura del mapa */
-  border-radius: 10px; /* Bordes redondeados */
-  margin-top: 0; /* Sin margen superior */
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
 }
 
 .map p {
-  font-size: 0.8rem; /* Tamaño de fuente */
-  color: var(--text-color); /* Color del texto */
-  margin: 0; /* Sin márgenes */
+  font-size: 0.8rem;
+  color: var(--text-color);
+  margin: 0;
 }
 
-/* Información circular */
 .info {
-  position: relative; /* Posicionamiento relativo */
-  width: 300px; /* Tamaño del contenedor */
-  height: 300px; /* Tamaño del contenedor */
-  text-align: center; /* Centra el contenido */
-  display: flex; /* Diseño flexible */
-  flex-direction: column; /* Apila contenido */
-  justify-content: center; /* Centrado vertical */
-  align-items: center; /* Centrado horizontal */
-  overflow: hidden; /* Oculta contenido desbordado */
+  position: relative;
+  width: 300px;
+  height: 300px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
   -webkit-clip-path: inset(0 0 0 25%);
-          clip-path: inset(0 0 0 25%); /* Recorte para diseño */
+          clip-path: inset(0 0 0 25%);
 }
 
 .info img {
-  width: 100%; /* Ancho completo */
-  height: 100%; /* Altura completa */
-  border-radius: 50%; /* Forma circular */
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
   -o-object-fit: cover;
-     object-fit: cover; /* Ajuste de imagen */
+     object-fit: cover;
 }
 
 .info.move-left {
-  transform: translateX(-95px); /* Desplazamiento hacia la izquierda */
+  transform: translateX(-95px);
 }
 
 .texto-info {
-  position: absolute; /* Superposición sobre la imagen */
-  color: white; /* Texto blanco */
-  font-size: 1rem; /* Tamaño del texto */
-  text-align: left; /* Alineación a la izquierda */
-  line-height: 0; /* Sin espaciado entre líneas */
-  display: flex; /* Diseño flexible */
-  flex-direction: column; /* Apila elementos */
-  padding-left: 10px; /* Espaciado lateral */
-  gap: 1rem; /* Espaciado entre textos */
+  position: absolute;
+  color: white;
+  font-size: 1rem;
+  text-align: left;
+  line-height: 0;
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+  gap: 1rem;
 }
 
-/* Párrafos específicos de texto-info */
-.texto-info:nth-of-type(1) {
-  top: 20%; /* Posición superior */
-}
-
-.texto-info:nth-of-type(2) {
-  top: 50%; /* Posición central */
-  transform: translateY(-90%); /* Ajuste vertical */
-}
-
-.texto-info:nth-of-type(3) {
-  bottom: 20%; /* Posición inferior */
-}
-
-/* Imagen de la persona con marcador de ubicación */
 .person {
-  width: 300px; /* Ancho del contenedor */
-  height: 300px; /* Altura del contenedor */
-  display: flex; /* Diseño flexible */
-  justify-content: center; /* Centrado horizontal */
-  align-items: flex-start; /* Alineado superior */
-  position: relative; /* Posicionamiento relativo */
-  flex: 1; /* Espaciado proporcional */
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  flex: 1;
 }
 
 .person img {
-  width: 100%; /* Ancho completo */
-  position: absolute; /* Posicionamiento libre */
-  top: -20%; /* Ajuste hacia arriba */
+  width: 100%;
+  position: absolute;
+  top: -20%;
 }
 
 /* Footer */
 footer {
-  background-color: #49516d; /* Fondo oscuro */
-  color: var(--text-color); /* Texto blanco */
-  text-align: center; /* Centra el contenido */
-  padding: 10px 0; /* Espaciado vertical */
-  margin: 0; /* Sin márgenes */
-}
-
-/* Encabezado */
-.header {
-  background-color: var(--primary-color); /* Fondo del encabezado */
-  color: var(--text-color); /* Color del texto */
-  display: flex; /* Diseño flexible para ordenar elementos */
-  align-items: center; /* Centra verticalmente los elementos */
-  justify-content: space-between; /* Distribuye espacio entre elementos */
-  width: 100%; /* Ocupa todo el ancho */
-}
-
-.logo {
-  font-size: 1.7rem; /* Tamaño de fuente grande */
-  font-weight: bold; /* Negrita */
-  color: #dcdae0; /* Color del logo */
-}
-
-.menu {
-  list-style: none; /* Elimina puntos de la lista */
-  display: flex; /* Elementos en fila */
-  gap: 1.5rem; /* Espaciado entre elementos */
+  background-color: #49516d;
+  color: var(--text-color);
+  text-align: center;
+  padding: 10px 0;
+  margin: 0;
 }
 
 /* Moviles */
-/* He tomado como ejemplo un Samsung Galaxy S8+ */
+/* He tomado como ejemplo, Dimensions: Samsung Galaxy S8+ */
 @media all and (max-width: 768px) {
   /* Ajuste general */
   body {
@@ -379,7 +329,6 @@ footer {
   .header {
     flex-direction: column;
     text-align: center;
-    padding: 1rem;
   }
   .menu {
     flex-direction: column;
@@ -395,8 +344,21 @@ footer {
     -o-object-fit: cover;
        object-fit: cover;
   }
+  /* Dots de navegación */
+  .promo-dots .dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 4px;
+    cursor: pointer;
+  }
   .arrow {
     font-size: 3rem;
+  }
+  .left {
+    left: 30px;
+  }
+  .right {
+    right: 40px;
   }
   /* Sección Productos */
   .productos {
