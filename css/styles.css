@@ -28,7 +28,8 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 1rem 2rem;
-  width: 100%;
+  width: 100vw; /* Asegura que ocupa el 100% del ancho de la ventana */
+  box-sizing: border-box; /* Incluye el padding en el ancho total */
 }
 
 .logo {
@@ -54,6 +55,8 @@ body {
   position: relative;
   max-height: 50vh;
   overflow: hidden;
+  width: 100vw; /* Asegura que ocupa el 100% del ancho de la ventana */
+  box-sizing: border-box; /* Incluye cualquier padding o borde en el ancho total */
 }
 
 .promo-img {
@@ -215,7 +218,8 @@ body {
   text-align: center;
   padding: 1rem;
   background-color: white;
-  width: 100%;
+  width: 100vw; /* Asegura que ocupa el 100% del ancho de la ventana */
+  box-sizing: border-box; /* Incluye el padding en el ancho total */
 }
 
 .social a img {
@@ -225,6 +229,7 @@ body {
 
 /* Ubicación */
 .ubicacion {
+  width: 100%;
   padding: 20px;
   display: flex;
   justify-content: space-between;
@@ -316,6 +321,8 @@ footer {
   text-align: center;
   padding: 10px 0;
   margin: 0;
+  width: 100vw; /* Asegura que ocupa el 100% del ancho de la ventana */
+  box-sizing: border-box; /* Incluye el padding en el ancho total */
 }
 
 /* Moviles */
@@ -330,14 +337,18 @@ footer {
     flex-direction: column;
     text-align: center;
   }
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
   .menu {
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 1rem;
     padding: 0;
   }
   /* Sección Promoción */
   .promocion {
-    max-height: 30vh;
+    max-height: 20vh;
   }
   .promo-img {
     max-height: 30vh;
@@ -360,40 +371,164 @@ footer {
   .right {
     right: 40px;
   }
-  /* Sección Productos */
-  .productos {
+  /* Sección de Productos y Recomendados */
+  .productos,
+  .recomendados {
+    padding: 1rem;
+    /* Padding reducido */
+    display: grid;
     grid-template-columns: 1fr;
+    /* Una sola columna */
     grid-template-rows: auto;
-    gap: 0.5rem;
+    gap: 1rem;
+    margin: 0 auto;
+    position: relative;
+    /* Posicionamiento relativo para contenedor */
   }
+  /* Títulos generales */
+  #nuestrosProductos {
+    grid-column: 1;
+    /* Ocupa toda la columna */
+    grid-row: 1;
+    /* Se posiciona arriba */
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+  .Recomendados {
+    grid-column: 1;
+    /* Ocupa toda la columna */
+    grid-row: 5;
+    /* Nueva fila, después de .producto-crayons */
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+  /* Estilo de productos */
   .producto {
-    padding: 0.5rem;
+    position: relative;
+    /* Relativo para controlar superposición */
+    padding: 0.8rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+    background-color: #ffffff;
+    text-align: center;
   }
   .producto img {
-    max-height: 30vw;
-  }
-  /* Sección Ubicación */
-  .ubicacion {
-    flex-direction: column;
-    text-align: center;
-    gap: 1rem;
-  }
-  .map iframe {
     width: 100%;
-    height: 150px;
+    max-height: 30vw;
+    /* Altura adaptativa */
+    -o-object-fit: contain;
+       object-fit: contain;
+    border-radius: 5px;
   }
-  .info, .person {
+  /* Posicionamiento específico para cada producto */
+  .producto-eraser {
+    grid-row: 2;
+    /* Justo después de #nuestrosProductos */
+    grid-column: 1;
+  }
+  .producto-notebook {
+    grid-row: 3;
+    grid-column: 1;
+  }
+  .producto-crayons {
+    grid-row: 4;
+    /* Sigue en la fila 4 */
+    grid-column: 1;
+  }
+  .producto-pen {
+    grid-row: 6;
+    /* Se mueve después de .Recomendados */
+    grid-column: 1;
+    max-height: 30vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+  .producto-pen img {
+    max-height: 65vw;
+    width: 100%;
+  }
+  /* Opcional: Ajuste de texto dentro de pen */
+  .producto-pen .texto {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+  /* Redes Sociales */
+  .social {
+    text-align: center;
+    background-color: white;
+    width: 100%;
+  }
+  .social a img {
+    width: 30px;
+  }
+  .ubicacion {
+    display: grid; /* Activa el grid */
+    grid-template-columns: 1fr 2fr 1fr; /* Tres columnas: círculo, texto y mujer */
+    grid-template-rows: auto; /* Una fila */
+    gap: 1rem; /* Espaciado entre columnas */
+    align-items: center; /* Centra verticalmente todos los elementos */
+    justify-items: center; /* Centra horizontalmente por defecto */
+    text-align: center;
+  }
+  .info {
+    position: relative; /* Asegura que los elementos hijos se posicionen dentro del contenedor */
     width: 200px;
     height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: right; /* Centra el texto horizontalmente */
+    overflow: hidden; /* Oculta cualquier contenido que se salga del círculo */
+  }
+  .info img {
+    width: 100%; /* El círculo ocupa todo el contenedor */
+    height: 100%;
+    border-radius: 50%; /* Forma circular */
+    -o-object-fit: cover;
+       object-fit: cover; /* Ajusta la imagen sin deformarla */
   }
   .texto-info {
-    font-size: 0.8rem;
-    line-height: 1.2rem;
+    position: absolute; /* Coloca el texto encima de la imagen */
+    color: white; /* Color del texto */
+    font-size: 0.7rem; /* Tamaño de fuente ajustado */
+    line-height: 1; /* Espaciado entre líneas */
+    text-align: left; /* Centra el texto dentro del contenedor */
+    margin-left: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente el texto */
+    width: 80%; /* Ajusta el ancho del texto para que quede dentro del círculo */
+    height: 80%; /* Ajusta la altura para que no se desborde */
   }
-  /* Footer de redes sociales */
-  .social img {
-    width: 24px;
-    margin: 0 5px;
+  .person {
+    width: 150px; /* Ajusta el tamaño del contenedor */
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px; /* Espacio adicional entre el elemento y el footer */
+  }
+  .person img {
+    width: 100%; /* La imagen ocupa el 100% del contenedor */
+    height: 100%; /* También ajusta la altura al tamaño del contenedor */
+    -o-object-fit: contain;
+       object-fit: contain; /* Evita deformaciones */
+  }
+  .map {
+    grid-column: 1/3;
+    /* Ocupa ambas columnas en pantallas pequeñas */
+    grid-row: 2;
+    /* Segunda fila */
+    gap: 1.5rem; /* Espaciado mayor entre elementos */
+  }
+  footer {
+    padding: 30px 0; /* Más espacio interno */
+    width: 100vh;
   }
 }
 /* Tablets */
