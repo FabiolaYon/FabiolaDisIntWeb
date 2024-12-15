@@ -1,3 +1,4 @@
+/* Monitores (Pantallas grandes) @media all and (min-width: 1025px) {}*/
 :root {
     --primary-color: #8a809e; 
     --secondary-color: #e3d7db; 
@@ -194,7 +195,7 @@ body {
 
 .producto-pen img {
     width: 100%;
-    max-height: 35vw;
+    max-height: 30vw;
     height: auto;
     object-fit: contain;
     border-radius: 5px;
@@ -317,6 +318,7 @@ footer {
     width: 100vw; 
     box-sizing: border-box; 
 }
+
 
 /* Moviles */
 /* He tomado como ejemplo, Dimensions: Samsung Galaxy S8+ */
@@ -454,7 +456,7 @@ footer {
     }
 
     .producto-pen img {
-        max-height: 65vw;
+        max-height: 60vw;
         width: 100%;
     }
 
@@ -545,23 +547,59 @@ footer {
     }
 }
 
-
-
-
-
-
-
-
 /* Tablets */
 @media all and (min-width: 769px) and (max-width: 1024px) {
-    :root {
-        --primary-color: blue;
-    }
-}
+    /* Encabezado */
 
-/* Monitores (Pantallas grandes) */
-@media all and (min-width: 1025px) {
-    :root {
-        --primary-color: green;
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem;
+        width: 100%;
+    }
+.logo {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-left: 12rem;
+    }
+    /* Menú */
+    .menu {
+        gap: 1rem;
+        margin-right: 10rem;
+    }
+
+    /* Sección Promoción */
+    .promocion {
+        max-height: 40vh;
+    }
+
+    .promo-img {
+        max-height: 50vh;
+        object-fit:cover;
+        width: 100%;
+    }
+
+    .arrow {
+        font-size: 3rem;
+    }
+
+    .left {
+        left: 200px;
+    }
+
+    .right {
+        right: 200px;
+    }
+
+    /* Productos */
+    .productos {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    /* Footer */
+    footer {
+        padding: 20px;
+        text-align: center;
     }
 }
