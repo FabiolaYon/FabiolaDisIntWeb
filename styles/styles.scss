@@ -677,3 +677,20 @@ footer {
         width: 100vw;
     }
 }
+
+// Variables 
+$primary-color: #8a809e;
+$secondary-color: #e3d7db;
+$text-color: #ffffff;
+$dot-colors: (#ddd, #aaa, $primary-color);
+$font-family: Arial, sans-serif;
+$mobile-breakpoint: 768px;
+$tablet-breakpoint: 1024px;
+
+
+// Estilos generales
+body {
+  font-family: $font-family;
+  background-color: $secondary-color;
+  color: $text-color;
+}

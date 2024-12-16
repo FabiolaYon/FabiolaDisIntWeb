@@ -636,4 +636,9 @@ footer {
     text-align: center;
     width: 100vw;
   }
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e3d7db;
+  color: #ffffff;
 }/*# sourceMappingURL=styles.css.map */
