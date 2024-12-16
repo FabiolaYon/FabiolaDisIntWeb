@@ -654,4 +654,38 @@ body {
   font-size: 1.7rem;
   font-weight: bold;
   color: #dcdae0;
+}
+
+.promo-dots {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+.promo-dots .dot-1 {
+  height: 14px;
+  width: 14px;
+  margin: 0 5px;
+  background-color: #ddd;
+  border-radius: 50%;
+  display: inline-block;
+  transition: 0.3s;
+}
+.promo-dots .dot-2 {
+  height: 14px;
+  width: 14px;
+  margin: 0 5px;
+  background-color: #aaa;
+  border-radius: 50%;
+  display: inline-block;
+  transition: 0.3s;
+}
+.promo-dots .dot-3 {
+  height: 14px;
+  width: 14px;
+  margin: 0 5px;
+  background-color: #8a809e;
+  border-radius: 50%;
+  display: inline-block;
+  transition: 0.3s;
 }/*# sourceMappingURL=styles.css.map */

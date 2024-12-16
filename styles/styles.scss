@@ -684,7 +684,6 @@ footer {
 $primary-color: #8a809e;
 $secondary-color: #e3d7db;
 $text-color: #ffffff;
-$dot-colors: (#ddd, #aaa, $primary-color);
 $font-family: Arial, sans-serif;
 $mobile-breakpoint: 768px;
 $tablet-breakpoint: 1024px;
@@ -713,3 +712,18 @@ body {
       color: if($primary-color == #8a809e, #dcdae0, $text-color);
     }
 }
+
+.promo-dots {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+  
+    @for $i from 1 through length($dot-colors) {
+      .dot-#{$i} {
+        height: 14px;
+        width: 14px;
+        margin: 0 5px;
+      }
+    }
+  }
