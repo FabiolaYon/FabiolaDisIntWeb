@@ -356,6 +356,7 @@ footer {
         max-height: 30vh;
         object-fit: cover;
         width: 100vw;
+        content: url('../imagenes/pincelsMovil.jpg'); // movil
     }
 
     /* Dots de navegación */
@@ -577,6 +578,7 @@ footer {
         max-height: 50vh;
         object-fit: cover;
         width: 100%;
+        content: url('../imagenes/pincelsTablet.jpg');
     }
 
     .arrow {
@@ -685,8 +687,6 @@ $primary-color: #8a809e;
 $secondary-color: #e3d7db;
 $text-color: #ffffff;
 $font-family: Arial, sans-serif;
-$mobile-breakpoint: 768px;
-$tablet-breakpoint: 1024px;
 
 
 // Estilos generales
@@ -746,4 +746,57 @@ $dot-colors: #ddd, #aaa, #8a809e; //Variable con lista de colores
       }
     }
   }
+}
+
+//Mixin
+// Variables
+$variable_movil: 768px;
+$variable_tablet: 1024px;
+
+@mixin media-max($breakpoint) {
+    @media (max-width: $breakpoint) {
+        @content;
+    }
+}
+
+.header {
+    display: flex;
+
+    @include media-max($variable_movil) {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    @include media-max($variable_tablet) {
+        padding: 1rem;
+    }
+}
+
+.menu {
+    display: flex;
+
+    @include media-max($variable_movil) {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+.promo-dots {
+    .dot {
+        height: 15px;
+        width: 15px;
+
+        @include media-max($mobile-breakpoint) {
+            height: 10px;
+            width: 10px;
+        }
+    }
+}
+
+.logo {
+    font-size: 3rem;
+
+    @include media-max($tablet-breakpoint) {
+        font-size: 2rem;
+    }
 }
