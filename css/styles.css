@@ -327,7 +327,6 @@ footer {
 }
 
 /* Moviles */
-/* He tomado como ejemplo, Dimensions: Samsung Galaxy S8+ */
 @media all and (max-width: 768px) {
   /* Ajuste general */
   body {
@@ -385,7 +384,6 @@ footer {
     gap: 1rem;
     margin: 0 auto;
     position: relative;
-    /* Posicionamiento relativo para contenedor */
   }
   /* Títulos generales */
   #nuestrosProductos {
@@ -524,7 +522,6 @@ footer {
   }
 }
 /* Tablets */
-/*Test en 1024 x 762*/
 @media all and (min-width: 769px) and (max-width: 1024px) {
   /* Encabezado */
   .header {
