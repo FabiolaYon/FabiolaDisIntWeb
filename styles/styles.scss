@@ -713,17 +713,37 @@ body {
     }
 }
 
+//Bucle for e if para el cambio de colores de los dots
+
+$dot-colors: #ddd, #aaa, #8a809e; //Variable con lista de colores
+
 .promo-dots {
-    position: absolute;
-    bottom: 10px;
-    width: 100%;
-    text-align: center;
-  
-    @for $i from 1 through length($dot-colors) {
-      .dot-#{$i} {
-        height: 14px;
-        width: 14px;
-        margin: 0 5px;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+
+  .dot-1, .dot-2, .dot-3 { 
+    height: 14px;
+    width: 14px;
+    margin: 0 5px;
+    border-radius: 50%;
+    display: inline-block;
+    transition: 0.3s;
+  }
+
+  @for $i from 1 through 3 {
+    .dot-#{$i} {
+        //Si $i = 1 entonces .dot-1 { ... }
+        // Si $i = 2 entonces .dot-2 { ... }
+        // Si $i = 3 entonces .dot-3 { ... }
+      @if $i == 1 {
+        background-color: #ddd;
+      } @else if $i == 2 {
+        background-color: #aaa;
+      } @else if $i == 3 {
+        background-color: #8a809e;
       }
     }
   }
+}
