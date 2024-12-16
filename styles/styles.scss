@@ -678,6 +678,8 @@ footer {
     }
 }
 
+// Parte final: Variables, selectores de anidamiento, mixin o función, if y un bucle
+
 // Variables 
 $primary-color: #8a809e;
 $secondary-color: #e3d7db;
@@ -693,4 +695,21 @@ body {
   font-family: $font-family;
   background-color: $secondary-color;
   color: $text-color;
+}
+
+// Encabezado
+.header {
+    background-color: $primary-color;
+    color: $text-color;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+  
+    .logo {
+      font-size: 1.7rem;
+      font-weight: bold;
+      //if
+      //Si el color de primary color es 8a809e entonces el color del logo de PineApplePen será dcdae0 y en caso de que no sea así, será $text-color que es blanco
+      color: if($primary-color == #8a809e, #dcdae0, $text-color);
+    }
 }
