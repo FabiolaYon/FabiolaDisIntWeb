@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +7,19 @@
     <title>Fabiola_Ayon_Practica4.html</title>
 </head>
 <body>
+
+    <!-- Encabezado + Logo -->
+    <header>
+        <!-- Uso de la etiqueta <picture> para manejar distintos formatos y resoluciones -->
+        <picture>
+            <!-- Imagen en formato WebP para dispositivos pequeños -->
+            <source srcset="img/logoPractica1.webp" type="image/webp" media="(max-width: 600px)">
+            <!-- Imagen en formato PNG para dispositivos medianos -->
+            <source srcset="img/logoPractica1.png" type="image/png" media="(max-width: 1200px)">
+            <!-- Imagen en formato JPG como alternativa para dispositivos más grandes -->
+            <img src="img/logoPractica1.jpg" alt="FloristeríaSakura_Logo">
+        </picture>
+    </header>
     
 </body>
 </html>
