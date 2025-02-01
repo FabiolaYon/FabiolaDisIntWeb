@@ -1,15 +1,24 @@
 /* Fabiola_Ayon_Practica4.css */
 
+@font-face {
+    font-family: 'Belleza';
+    src: url('fonts/Belleza-Regular.ttf');
+}
+
 body {
     background-image: url('img/fondoPetalos.png');
 }
 
 header {
-    display: flex; /* Activa Flexbox */
+    display: flex;
 }
 
 header img {
     width: 150px; 
+}
+
+.header_texto {
+    flex-direction: column;
 }
 
 header h1 {
@@ -18,4 +27,18 @@ header h1 {
     font-family: 'Brush Script MT', 'Lucida Handwriting', cursive;
     font-weight: normal;
     color: rgb(247, 151, 180);
+}
+
+header h2 {
+    text-align: right;
+    font-family: 'Belleza', sans-serif;
+    font-size: 20px;
+    margin-top: -50px;
+    color: rgb(134, 59, 81);
+}
+
+main h2 {
+    font-size: 30px;
+    font-weight: normal;
+    color: rgb(63, 7, 30);
 }
