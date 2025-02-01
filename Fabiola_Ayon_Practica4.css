@@ -50,7 +50,8 @@ main h2 {
     flex-direction: column;
     align-items: center; 
     gap: 30px; 
-    text-align: center; 
+    text-align: center;
+    margin-bottom: 30px; 
 }
 
 /*Animación en título */
@@ -86,3 +87,32 @@ main h2 {
     50% { color: rgb(255, 105, 180); }
     100% { color: rgb(255, 0, 127); }
 }
+
+/* Transición */
+
+.transicionVideo {
+    transition: 
+        border 0.5s ease-in-out, 
+        box-shadow 0.5s ease-in-out, 
+}
+
+/* Hover */
+.transicionVideo:hover {
+    animation: rotacionVideo 0.6s ease-in-out forwards;
+    border: 10px solid rgb(219, 37, 137);
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px rgba(219, 37, 137, 0.7);
+}
+
+@keyframes rotacionVideo {
+    0% {
+        transform: scale(1.2) rotate(5deg); /* derecha */
+    }
+    50% {
+        transform: scale(1.2) rotate(-5deg); /* izquierda */
+    }
+    100% {
+        transform: scale(1.2) rotate(0deg); /* centrado */
+    }
+}
+
