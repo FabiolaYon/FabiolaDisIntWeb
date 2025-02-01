@@ -26,7 +26,6 @@ header h1 {
     margin-left: 20px;
     font-family: 'Brush Script MT', 'Lucida Handwriting', cursive;
     font-weight: normal;
-    color: rgb(247, 151, 180);
 }
 
 header h2 {
@@ -54,4 +53,36 @@ main h2 {
     text-align: center; 
 }
 
+/*Animación en título */
 
+.animacionTitulo {
+    animation: 
+    FlorSakura 3s ease-in-out infinite alternate, 
+    CambioColor 6s linear infinite;
+    /*
+    Los primeros segundos es lo que tarda en activarse.
+    easi-in-out : Acelera de forma progresiva.
+    inifinite : Se repite de forma infinita mientras se esté en la página.
+    alternate : Va y vuelve.
+    linear: La animación se mueve al mismo ritmo.
+    */
+}
+
+@keyframes FlorSakura {
+    0% { 
+        opacity: 0; /* Empieza invisible */
+        transform: scale(0.5) rotate(-10deg) translateY(-10px); /* Pequeño, inclinado y un poco arriba */
+        text-shadow: 0px 0px 10px rgba(255, 192, 203, 0.5); /* Sombra */
+    }
+    100% { 
+        opacity: 1; /* Se hace completamente visible */
+        transform: scale(1) rotate(0deg) translateY(10px); /* Tamaño normal, recto y baja un poco */
+        text-shadow: 0px 0px 20px rgba(255, 105, 180, 0.8); /* Sombra */
+    }
+}
+
+@keyframes CambioColor { /* Cambios de colores dependiendo de la etapa del movimiento */
+    0% { color: rgb(247, 151, 180); }
+    50% { color: rgb(255, 105, 180); }
+    100% { color: rgb(255, 0, 127); }
+}
