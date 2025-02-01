@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="Fabiola_Ayon_Practica4.css" rel="stylesheet" type="text/css">
     <title>Fabiola_Ayon_Practica4.html</title>
 </head>
+
 <body>
 
     <!-- Encabezado + Logo -->
@@ -40,6 +42,35 @@
         <!-- No soporta el audio -->
         El navegador no soporta el audio.
     </audio>
-    
+
+    <!-- Videos -->
+    <main>
+        <section class="videos">
+            <h2>Te enseñaremos a hacer ramos en nuestra tienda.<br>
+                ¡Especial San Valentín!</h2>
+
+            <!-- Video con la etiqueta <video> y soporte para MP4 y OGV 
+                controls: Controles para reproducir el vídeo -->
+            <video controls width="600">
+                <source src="video/TutorialRamo.mp4" type="video/mp4">
+                <source src="video/TutorialRamo.ogv" type="video/ogv">
+                El navegador no soporta el vídeo.
+            </video>
+
+            <!-- Video incrustado desde YouTube
+             autoplay=1 : Reproducción automática.
+             loop=1 : Video en bucle (se repite).
+             playlist=qEc8MyoEkLU : Necesario para que el bucle funcione.
+             controls=1 : Muestra los controles de reproducción.
+             mute=1 : Reproduce el video silenciado (necesario para que algunos navegadores).
+             allow="autoplay; encrypted-media" : Permite la reproducción automática. -->
+            <iframe
+                src="https://www.youtube.com/embed/qEc8MyoEkLU?autoplay=1&loop=1&playlist=qEc8MyoEkLU&controls=1&mute=1"
+                allow="autoplay; encrypted-media" width="600" height="340" frameborder="0" allowfullscreen>
+            </iframe>
+        </section>
+    </main>
+
 </body>
+
 </html>

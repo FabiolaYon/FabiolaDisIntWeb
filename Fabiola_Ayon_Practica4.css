@@ -23,17 +23,17 @@ header img {
 
 header h1 {
     font-size: 80px; 
-    margin-left: 40px;
+    margin-left: 20px;
     font-family: 'Brush Script MT', 'Lucida Handwriting', cursive;
     font-weight: normal;
     color: rgb(247, 151, 180);
 }
 
 header h2 {
-    text-align: right;
+    text-align: left;
     font-family: 'Belleza', sans-serif;
     font-size: 20px;
-    margin-top: -50px;
+    margin-top: -30px;
     color: rgb(134, 59, 81);
 }
 
@@ -41,4 +41,17 @@ main h2 {
     font-size: 30px;
     font-weight: normal;
     color: rgb(63, 7, 30);
+    flex-direction: column; 
+    align-items: center; 
 }
+
+/* Vídeos */
+.videos {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 30px; 
+    text-align: center; 
+}
+
+
