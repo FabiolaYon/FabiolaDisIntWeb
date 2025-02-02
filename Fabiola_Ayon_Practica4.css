@@ -1,0 +1,118 @@
+/* Fabiola_Ayon_Practica4.css */
+
+@font-face {
+    font-family: 'Belleza';
+    src: url('fonts/Belleza-Regular.ttf');
+}
+
+body {
+    background-image: url('img/fondoPetalos.png');
+}
+
+header {
+    display: flex;
+}
+
+header img {
+    width: 150px; 
+}
+
+.header_texto {
+    flex-direction: column;
+}
+
+header h1 {
+    font-size: 80px; 
+    margin-left: 20px;
+    font-family: 'Brush Script MT', 'Lucida Handwriting', cursive;
+    font-weight: normal;
+}
+
+header h2 {
+    text-align: left;
+    font-family: 'Belleza', sans-serif;
+    font-size: 20px;
+    margin-top: -30px;
+    color: rgb(134, 59, 81);
+}
+
+main h2 {
+    font-size: 30px;
+    font-weight: normal;
+    color: rgb(63, 7, 30);
+    flex-direction: column; 
+    align-items: center; 
+}
+
+/* Vídeos */
+.videos {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 30px; 
+    text-align: center;
+    margin-bottom: 30px; 
+}
+
+/*Animación en título */
+
+.animacionTitulo {
+    animation: 
+    FlorSakura 3s ease-in-out infinite alternate, 
+    CambioColor 6s linear infinite;
+    /*
+    Los primeros segundos es lo que tarda en activarse.
+    easi-in-out : Acelera de forma progresiva.
+    inifinite : Se repite de forma infinita mientras se esté en la página.
+    alternate : Va y vuelve.
+    linear: La animación se mueve al mismo ritmo.
+    */
+}
+
+@keyframes FlorSakura {
+    0% { 
+        opacity: 0; /* Empieza invisible */
+        transform: scale(0.5) rotate(-10deg) translateY(-10px); /* Pequeño, inclinado y un poco arriba */
+        text-shadow: 0px 0px 10px rgba(255, 192, 203, 0.5); /* Sombra */
+    }
+    100% { 
+        opacity: 1; /* Se hace completamente visible */
+        transform: scale(1) rotate(0deg) translateY(10px); /* Tamaño normal, recto y baja un poco */
+        text-shadow: 0px 0px 20px rgba(255, 105, 180, 0.8); /* Sombra */
+    }
+}
+
+@keyframes CambioColor { /* Cambios de colores dependiendo de la etapa del movimiento */
+    0% { color: rgb(247, 151, 180); }
+    50% { color: rgb(255, 105, 180); }
+    100% { color: rgb(255, 0, 127); }
+}
+
+/* Transición */
+
+.transicionVideo {
+    transition: 
+        border 0.5s ease-in-out, 
+        box-shadow 0.5s ease-in-out, 
+}
+
+/* Hover */
+.transicionVideo:hover {
+    animation: rotacionVideo 0.6s ease-in-out forwards;
+    border: 10px solid rgb(219, 37, 137);
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px rgba(219, 37, 137, 0.7);
+}
+
+@keyframes rotacionVideo {
+    0% {
+        transform: scale(1.2) rotate(5deg); /* derecha */
+    }
+    50% {
+        transform: scale(1.2) rotate(-5deg); /* izquierda */
+    }
+    100% {
+        transform: scale(1.2) rotate(0deg); /* centrado */
+    }
+}
+
