@@ -17,18 +17,20 @@
 
 El objetivo de la práctica es crear la “página de inicio” de una empresa. Es decir, la clásica página de inicio con imágenes, sonido, vídeo y animaciones...
 
-La carpeta video tiene archivos no funcionables ya que daba error al subir a Git por el peso.
+Los archivos adjuntos AQUÍ están VACÍOS
 
-He usado Streamble para subir los archivos TutorialRamo.mp4 y Tutorial.ogv, los que están en GIT son vacíos.
+SOLO carpeta Audio y video
 
-Link Drive: https://drive.google.com/drive/folders/1pKSGH9C2Uhn5mB_kTJRStuPnCIbJ_-pH?usp=drive_link
+Link Drive https://drive.google.com/drive/folders/166ny47XTEgJCKmxuQDTi7QvCA4SeQ7SF?usp=sharing
+        
+        Fabiola_Ayon_Practica4  /
+                                / video /   TutorialRamo.mp4
+                                            TutorialRamo.ogv
 
-Y funcionaría con lo siguiente en HTML
-<video class ="transicionVideo" controls width="350">
-    <source src="video/TutorialRamo.mp4" type="video/mp4">
-    <source src="video/TutorialRamo.ogv" type="video/ogv"> 
-    El navegador no soporta el vídeo.
-</video>
+                                / audio /   Christina_Perri-herecomesthesun.mp3
+                                            Christina_Perri-herecomesthesun.ogv
 
-Pero para que funcione visualmente he utilizado <iframe>
-<iframe class="transicionVideo" src="https://streamable.com/e/58nl2n" width="500" height="500" frameborder="0" allowfullscreen></iframe>
+
+Fabiola_Ayon_Practica4 COMPLETA
+
+Link Drive https://drive.google.com/drive/folders/1XwRdckxZfsCT0d2PtyKU5fkPpL6BEChK?usp=sharing
