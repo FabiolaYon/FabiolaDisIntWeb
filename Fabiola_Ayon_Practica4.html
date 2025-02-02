@@ -51,11 +51,17 @@
 
             <!-- Video con la etiqueta <video> y soporte para MP4 y OGV 
                 controls: Controles para reproducir el vídeo -->
-            <video class ="transicionVideo" controls width="350">
+                
+                <!-- ESTO ES PARTE DE LA PRÁCTICA 4 -->
+            <!-- <video class ="transicionVideo" controls width="350">
                 <source src="video/TutorialRamo.mp4" type="video/mp4">
                 <source src="video/TutorialRamo.ogv" type="video/ogv"> 
                 El navegador no soporta el vídeo.
-            </video>
+            </video> -->
+
+            <!-- ESTO NO ES PARTE DE LA PRACTICA 4, solo funcional-->
+            <iframe class="transicionVideo" src="https://streamable.com/e/58nl2n" width="500" height="500"
+                frameborder="0" allowfullscreen></iframe>
 
             <!-- Video Youtube
              autoplay=1 : Reproducción automática.
@@ -64,7 +70,7 @@
              controls=1 : Muestra los controles de reproducción.
              mute=1 : Reproduce el video silenciado (necesario para que algunos navegadores).
              allow="autoplay; encrypted-media" : Permite la reproducción automática. -->
-            <iframe class ="transicionVideo"
+            <iframe class="transicionVideo"
                 src="https://www.youtube.com/embed/qEc8MyoEkLU?autoplay=1&loop=1&playlist=qEc8MyoEkLU&controls=1&mute=1"
                 allow="autoplay; encrypted-media" width="600" height="340" frameborder="0" allowfullscreen>
             </iframe>
