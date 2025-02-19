@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Ayuda a Luigi!</title>
+    <link rel="stylesheet" href="./FabiolaAyon_Practica5.css" type="text/css">
+</head>
+
+<body>
+
+    <!-- Pantalla de Inicio -->
+    <div id="startScreen">
+        <h1 class="titulo">¡ Ayuda a Luigi !</h1>
+        <h2 id="subtitulo">¡Consigue capturar todos los fantasmas!</h2>
+        <button id="boton" onclick="startGame()">¿Estás listo?</button>
+        <button id="boton_daltonico" onclick="modoDaltonico()">Modo Daltónico</button>
+        <br><br>
+        <img src="imagenes/luigi.gif" alt="Luigi" width="300">
+    </div>
+
+    <!-- Pantalla de Juego -->
+    <div id="gameScreen" style="display: none;">
+        <score-board></score-board>
+        <button id="pauseButton" onclick="botonPausa()">Pausar</button>
+        <div id="gameContainer"></div>
+        <img src="imagenes/luigi-miedo.gif" alt="Luigi miedo" width="300">
+    </div>
+
+    <!-- Pantalla de Fin -->
+    <div id="endScreen" style="display: none;">
+        <button id="boton" onclick="restartGame()">¡Te pillaron! ¿Jugar de nuevo?</button>
+        <br><br>
+        <img src="imagenes/luigi-pierde.gif" alt="Luigi pierde" width="300">
+    </div>
+
+    <script src="./FabiolaAyon_Practica5.js"></script>
+
+</body>
+
+</html>
