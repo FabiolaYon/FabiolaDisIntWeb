@@ -13,3 +13,6 @@ Inicio decorando con CSS.
 Añado imagen de fondo.
 Cambio de letra y color.
 Decoración de los botones.
+
+## 3
+Ajustando JavaScript para startGame, intercambio de pantallas
