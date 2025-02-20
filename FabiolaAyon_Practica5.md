@@ -16,3 +16,9 @@ Decoración de los botones.
 
 ## 3
 Ajustando JavaScript para startGame, intercambio de pantallas
+
+## 4
+Inserto imagen en botón.
+Edición con CSS del game Container
+Al pasar el mouse sobre el fantasma este crece un poquito
+Añado imagen de fantasma Boo.webp
