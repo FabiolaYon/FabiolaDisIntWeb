@@ -9,3 +9,7 @@ Pondré imágenes de Luigi en cada pantalla para dar más detalle.
 Preparé el resto de archivos .css y .js
 
 ## 2
+Inicio decorando con CSS.
+Añado imagen de fondo.
+Cambio de letra y color.
+Decoración de los botones.
