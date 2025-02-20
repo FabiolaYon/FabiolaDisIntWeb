@@ -22,3 +22,10 @@ Inserto imagen en botón.
 Edición con CSS del game Container
 Al pasar el mouse sobre el fantasma este crece un poquito
 Añado imagen de fantasma Boo.webp
+Aparece el fantasma en posiciones aleatorias y cada dos segundos.
+
+# 5
+Web component, score-borad .
+Encapsulo el marcador para ser reutilizado.
+La puntuación aumenta en 10 puntos.
+Le damos diseño dentro del ShadowDom > attachshadow > shadowRoot.
