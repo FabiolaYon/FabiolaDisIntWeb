@@ -24,8 +24,15 @@ Al pasar el mouse sobre el fantasma este crece un poquito
 Añado imagen de fantasma Boo.webp
 Aparece el fantasma en posiciones aleatorias y cada dos segundos.
 
-# 5
+## 5
 Web component, score-borad .
 Encapsulo el marcador para ser reutilizado.
 La puntuación aumenta en 10 puntos.
 Le damos diseño dentro del ShadowDom > attachshadow > shadowRoot.
+
+## 6 
+Si el fantasma no es capturado a tiempo.
+spawnGhost detecta si el fantasma se captura o no.
+Mostrar endScreen si pierdes.
+Utilizo gameOver para finalizar el juego. 
+Proceso...
