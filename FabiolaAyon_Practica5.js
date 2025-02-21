@@ -41,29 +41,58 @@ class ScoreBoard extends HTMLElement {
 
 customElements.define('score-board', ScoreBoard); //Nos permite crear un HTML personalizado
 
-customElements.define('score-board', ScoreBoard);
-
 const scoreBoard = document.querySelector('score-board');
 const gameContainer = document.getElementById('gameContainer');
-let gameInterval;
 
-// Actualizar el evento del fantasma para sumar puntos
+let gamePaused = false;
+
+function botonPausa() {
+    if (!gameActive) return;
+
+    if (gamePaused === true) {
+        gamePaused = false; // Reanuda el juego
+    } else {
+        gamePaused = true; // Pausa el juego
+    }
+
+    if (gamePaused === true) {
+        pauseButton.textContent = "Reanudar";
+    } else {
+        pauseButton.textContent = "Pausar";
+    }
+
+    if (gamePaused) {
+        ghostTimeouts.forEach(timeout => clearTimeout(timeout));
+    } else {
+        setTimeout(() => {
+            // Reanuda el juego después de un segundo
+        }, 1000);
+    }
+}
+
+// Modificación en spawnGhost
 function spawnGhost() {
+    if (gamePaused) return; //si se pausa no genero fantasma
+
     let ghost = document.createElement('div');
     ghost.classList.add('ghost');
     ghost.style.top = Math.random() * 450 + 'px';
     ghost.style.left = Math.random() * 450 + 'px';
     gameContainer.appendChild(ghost);
 
-    ghost.addEventListener('click', () => {
+    let ghostTimeout = setTimeout(() => {
         ghost.remove();
         gameOver();
-    });
-
-    setTimeout(() => {
-        ghost.remove();
     }, 2000);
+
+    ghost.addEventListener('click', () => {
+        clearTimeout(ghostTimeout);
+        ghost.remove();
+        scoreBoard.updateScore(10);
+    });
 }
+
+let gameInterval = setInterval(spawnGhost, 2000);
 
 //Cuando se presione onclick startGame
 function startGame() {

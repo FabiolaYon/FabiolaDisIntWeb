@@ -36,3 +36,6 @@ spawnGhost detecta si el fantasma se captura o no.
 Mostrar endScreen si pierdes.
 Utilizo gameOver para finalizar el juego. 
 Proceso...
+
+## 7 
+Agrego pausa al juego, botonPausa.
