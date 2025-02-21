@@ -39,3 +39,7 @@ Proceso...
 
 ## 7 
 Agrego pausa al juego, botonPausa.
+
+## 8 
+Modo daltonico, básico, proceso de cambio puntero a color naranja.
+Agrego botones y proceso de pantallas para ver no ver, .css y .js.

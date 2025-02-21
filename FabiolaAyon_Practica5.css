@@ -1,74 +1,138 @@
 /* FabiolaAyon_Practica5.css */
 
-    body {
-        font-family: "Comic Sans MS", "Comic Sans", cursive;
-        text-align: center;
-        background-image: url('imagenes/fondo.jpg');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        width: 100vw;
-        height: 100vh;
-        margin: 0;
-        /* cursor: none; Aquí haré un efecto "linterna" */ 
-    }
+body {
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    text-align: center;
+    background-image: url('imagenes/fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    /* cursor: none; Aquí haré un efecto "linterna" */
+}
 
-    .titulo {
-        font-size: 100px;
-        font-weight: bold;
-        color: rgb(187, 23, 202);
-        text-shadow:
-            0 0 10px #74c92e,
-            0 0 20px #74c92e,
-            0 0 30px #74c92e,
-            0 0 40px #74c92e,
-            0 0 50px #74c92e;
-    }
+.titulo {
+    font-size: 100px;
+    font-weight: bold;
+    color: rgb(187, 23, 202);
+    text-shadow:
+        0 0 10px #74c92e,
+        0 0 20px #74c92e,
+        0 0 30px #74c92e,
+        0 0 40px #74c92e,
+        0 0 50px #74c92e;
+}
 
-    #subtitulo {
-        font-size: 30px;
-        font-weight: bold;
-        color: rgb(187, 23, 202);
-        text-shadow:
-            0 0 10px #74c92e,
-            0 0 20px #74c92e,
-            0 0 30px #74c92e,
-            0 0 40px #74c92e,
-            0 0 50px #74c92e;
-    }
+#subtitulo {
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(187, 23, 202);
+    text-shadow:
+        0 0 10px #74c92e,
+        0 0 20px #74c92e,
+        0 0 30px #74c92e,
+        0 0 40px #74c92e,
+        0 0 50px #74c92e;
+}
 
-    #boton {
-        background-image: url('imagenes/luigi_boton.jpg');
-        background-size: cover;
-        margin-top: 30px;
-        padding: 20px;
-        font-weight: bold;
-        font-size: 20px;
-        color: white;
-        border: 10px double rgb(67, 184, 77);
-        border-radius: 10px;
-    }
+#boton {
+    background-image: url('imagenes/luigi_boton.jpg');
+    background-size: cover;
+    margin-top: 30px;
+    padding: 20px;
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+    border: 10px double rgb(67, 184, 77);
+    border-radius: 10px;
+}
 
-    #gameContainer {
-        position: relative;
-        width: 500px;
-        height: 500px;
-        margin: 20px auto;
-        background-color: #222;
-        overflow: hidden;
-        border: 5px solid rgb(154, 218, 82);
-    }
-    /**/
-    .ghost {
-        position: absolute;
-        width: 50px;
-        height: 50px;
-        background: url('imagenes/Boo.webp');
-        background-size: cover;
-        transition: transform 0.2s;
-    }
+/* No soy especialista en daltónicos pero he visto en internet que el mejor 
+        color que ven es el blanco y negro así que lo adapto de esta forma.
+        
+        Abajo también cambiaré el puntero en vez de amarillo, un tono más naranja.*/
+#boton_daltonico {
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-weight: bold;
+    font-size: 20px;
 
-    .ghost:hover {
-        transform: scale(1.2);
-    }
+    text-align: center;
+    padding: 20px;
+
+    border: 10px double;
+    border-radius: 10px;
+}
+
+#pauseButton {
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-weight: bold;
+    font-size: 20px;
+
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+
+    border: 10px double;
+    border-radius: 10px;
+}
+
+#startScreen {
+    display: block;
+}
+
+#gameScreen,
+#endScreen {
+    display: none;
+}
+
+#gameContainer {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    margin: 20px auto;
+    background-color: #222;
+    overflow: hidden;
+    border: 5px solid rgb(154, 218, 82);
+}
+
+/**/
+.ghost {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: url('imagenes/Boo.webp');
+    background-size: cover;
+    transition: transform 0.2s;
+}
+
+.ghost:hover {
+    transform: scale(1.2);
+}
+
+.pointer {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, rgba(255, 255, 0, 0.8) 10%, rgba(0, 0, 0, 0) 70%);
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+}
+
+/* Componente web */
+score-board::part(score-container) {
+    position: absolute;
+    font-size: 20px;
+    color: rgb(158, 201, 40);
+
+    padding: 10px;
+    align-items: center;
+    margin-top: 40px;
+    margin-left: 500px;
+
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    border: 2px solid rgb(158, 201, 40);
+}

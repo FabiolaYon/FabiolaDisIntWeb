@@ -70,6 +70,29 @@ function botonPausa() {
     }
 }
 
+function modoDaltonico() {
+    if (colorModoDaltonico === true) {
+        colorModoDaltonico = false; //activa modo daltonico
+    } else {
+        colorModoDaltonico = true; //desactiva modo daltonico
+    }
+    // con requestAnimationFrame solicitamos el cambio del color del puntero
+    // con cancelAnimationFrame vuelve al color original
+    if (colorModoDaltonico) {
+        colorBlindAnimation = requestAnimationFrame(cambiarColorPuntero);
+    } else {
+        cancelAnimationFrame(colorBlindAnimation);
+        pointer.style.background = "radial-gradient(circle, rgba(255, 255, 0, 0.8) 10%, rgba(0, 0, 0, 0) 70%)";
+    }
+}
+
+function cambiarColorPuntero() {
+    if (colorModoDaltonico) {
+        pointer.style.background = "radial-gradient(circle, #ff6600 10%, rgba(0, 0, 0, 0) 70%)";
+        colorBlindAnimation = requestAnimationFrame(cambiarColorPuntero);
+    }
+}
+
 // Modificación en spawnGhost
 function spawnGhost() {
     if (gamePaused) return; //si se pausa no genero fantasma
