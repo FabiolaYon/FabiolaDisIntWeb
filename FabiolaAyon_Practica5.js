@@ -104,15 +104,14 @@ function spawnGhost() {
     gameContainer.appendChild(ghost);
 
     let ghostTimeout = setTimeout(() => {
-        ghost.remove();
-        gameOver();
+        if (!gamePaused) {
+            ghost.classList.add('susto');
+            setTimeout(() => {
+                ghost.remove();
+                gameOver();
+            }, 500);
+        }
     }, 2000);
-
-    ghost.addEventListener('click', () => {
-        clearTimeout(ghostTimeout);
-        ghost.remove();
-        scoreBoard.updateScore(10);
-    });
 }
 
 let gameInterval = setInterval(spawnGhost, 2000);

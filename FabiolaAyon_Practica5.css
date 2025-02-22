@@ -112,6 +112,20 @@ body {
     transform: scale(1.2);
 }
 
+/* Susto */
+.susto {
+    animation: susto 0.1s forwards;
+}
+
+@keyframes susto {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(15);
+    }
+}
+
 .pointer {
     position: absolute;
     width: 100px;

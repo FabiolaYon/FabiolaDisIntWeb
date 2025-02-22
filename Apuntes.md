@@ -43,3 +43,7 @@ Agrego pausa al juego, botonPausa.
 ## 8 
 Modo daltonico, básico, proceso de cambio puntero a color naranja.
 Agrego botones y proceso de pantallas para ver no ver, .css y .js.
+
+## 9 
+Capturar fantasmas con ghostTimeout. 
+Ponemos "susto" con el css, se debe agrandar la imagen con @keyframes.
