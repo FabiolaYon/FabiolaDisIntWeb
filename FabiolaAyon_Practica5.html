@@ -21,7 +21,8 @@
     </div>
 
     <!-- Pantalla de Juego -->
-    <div id="gameScreen" style="display: none;">
+    <div id="gameScreen">
+        <!-- Componente web -->
         <score-board></score-board>
         <button id="pauseButton" onclick="botonPausa()">Pausar</button>
         <div id="gameContainer"></div>
@@ -29,13 +30,15 @@
     </div>
 
     <!-- Pantalla de Fin -->
-    <div id="endScreen" style="display: none;"> <!-- Temporalmente no se ve -->
+    <div id="endScreen">
         <button id="boton" onclick="restartGame()">¡Te pillaron! ¿Jugar de nuevo?</button>
         <br><br>
         <img src="imagenes/luigi-pierde.gif" alt="Luigi pierde" width="300">
     </div>
 
-    <script src="./FabiolaAyon_Practica5.js"></script>
+    <div class="pointer" id="pointer"></div>
+
+    <script src="FabiolaAyon_Practica5.js"></script>
 
 </body>
 
